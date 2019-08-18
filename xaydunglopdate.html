@@ -30,6 +30,15 @@
         this.setYear = function (year) {
             this.year = year;
         };
+        this.setDate = function (day,month,year) {
+            this.day = day;
+            this.month = month;
+            this.year = year;
+        };
+        this.toString = function (day,month,year) {
+            let date ="";
+            return date = String(day) + "/" + String(month) + "/" + String(year);
+        }
     };
         let date = new MyDate(2,2,2007);
          day = date.getDay();
@@ -42,7 +51,12 @@
         day = date.getDay();
         month = date.getMonth();
         year =date.getYear();
-        alert(day + "/" + month + "/" + year)
+        alert(day + "/" + month + "/" + year);
+        date.setDate(3,4,2020);
+        day = date.getDay();
+        month = date.getMonth();
+        year = date.getYear();
+        document.write(date.toString(day,month,year));
 
 </script>
 </html>
